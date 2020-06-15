@@ -1,0 +1,9 @@
+{
+  "author": "ownCloud GmbH",
+  "image_name": "my_image",
+  "image_description": "My docker image",
+  "git_server": "github.com",
+  "git_org": "owncloud-ops",
+  "dockerhub_namespace": "owncloudops",
+  "license_year": "{% now 'Europe/Berlin', '%Y' %}"
+}

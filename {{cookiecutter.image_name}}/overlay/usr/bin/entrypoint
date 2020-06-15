@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -eo pipefail
+
+printf "\nStarting {{ cookiecutter.image_name | capitalize }} ...\n"
+exec # <start command>
