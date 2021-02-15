@@ -20,7 +20,7 @@ Docker image for {{ cookiecutter.image_name | capitalize }}.
 You could use the `BUILD_VERSION` to specify the target version.
 
 ```Shell
-docker build --build-arg BUILD_VERSION=1.8 -f Dockerfile -t {{ cookiecutter.image_name | lower }}:latest .
+docker build -f Dockerfile -t {{ cookiecutter.image_name | lower }}:latest .
 ```
 
 ## License

@@ -1,10 +1,11 @@
 FROM alpine
 
-LABEL maintainer="{{ cookiecutter.author }}" \
-    org.label-schema.name="{{ cookiecutter.image_name | capitalize }}" \
-    org.label-schema.vendor="{{ cookiecutter.author }}" \
-    org.label-schema.schema-version="1.0"
-
+LABEL maintainer="{{ cookiecutter.author }}"
+LABEL org.opencontainers.image.authors="{{ cookiecutter.author }}"
+LABEL org.opencontainers.image.title="{{ cookiecutter.image_name | capitalize }}"
+LABEL org.opencontainers.image.url="https://github.com/owncloud-ops/{{ cookiecutter.image_name | lower }}"
+LABEL org.opencontainers.image.source="https://github.com/owncloud-ops/{{ cookiecutter.image_name | lower }}"
+LABEL org.opencontainers.image.documentation="https://github.com/owncloud-ops/{{ cookiecutter.image_name | lower }}"
 
 ARG BUILD_VERSION=
 
