@@ -1,8 +1,8 @@
 ---
 repository:
-  name: cookiecutter-docker-image
-  description: Cookiecutter recipe for docker images.
-  topics: docker, cookiecutter
+  name: cookiecutter-container
+  description: Cookiecutter recipe for contaner images
+  topics: oci, container, cookiecutter
 
   private: false
   has_issues: true
@@ -52,5 +52,3 @@ branches:
       required_status_checks: null
       enforce_admins: null
       restrictions: null
-
-...

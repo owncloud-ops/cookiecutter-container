@@ -1,9 +1,9 @@
 ---
 repository:
-  name: {{ cookiecutter.image_name | lower }}
-  description: Docker image for {{ cookiecutter.image_name | capitalize }}
+  name: { { cookiecutter.image_name | lower } }
+  description: Custom container image for {{ cookiecutter.image_name | capitalize }}
   homepage: https://hub.docker.com/r/{{ cookiecutter.dockerhub_namespace }}/{{ cookiecutter.image_name | lower }}
-  topics: docker, {{ cookiecutter.image_name | lower }}
+  topics: oic, container, {{ cookiecutter.image_name | lower }}
 
   private: false
   has_issues: true

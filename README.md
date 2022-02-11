@@ -1,8 +1,12 @@
-# cookiecutter-docker-image
+# cookiecutter-container
 
-Cookiecutter recipe to easily create docker images.
+Cookiecutter recipe to easily create container images.
 
-Use it with `cookiecutter gh:owncloud-ops/cookiecutter-docker-image`
+## Usage
+
+```Shell
+cookiecutter gh:owncloud-ops/cookiecutter-container
+```
 
 ## License
 

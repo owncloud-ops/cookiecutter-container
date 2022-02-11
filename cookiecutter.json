@@ -1,7 +1,7 @@
 {
   "author": "ownCloud GmbH",
   "image_name": "my_image",
-  "image_description": "My docker image",
+  "image_description": "My container image",
   "git_server": "github.com",
   "git_org": "owncloud-ops",
   "dockerhub_namespace": "owncloudops",
