@@ -1,5 +1,7 @@
 # cookiecutter-container
 
+[![Build Status](https://drone.owncloud.com/api/badges/owncloud-ops/cookiecutter-container/status.svg)](https://drone.owncloud.com/owncloud-ops/cookiecutter-container/)
+
 Cookiecutter recipe to easily create container images.
 
 ## Usage
