@@ -4,7 +4,7 @@
   "packageRules": [
     {
       "description": "Disable digest pinning for docker template file",
-      "matchFiles": ["Dockerfile"],
+      "matchPaths": ["Dockerfile"],
       "pinDigests": false
     }
   ],
