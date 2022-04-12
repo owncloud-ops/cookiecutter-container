@@ -25,4 +25,4 @@ docker build -f Dockerfile -t {{ cookiecutter.image_name | lower }}:latest .
 
 ## License
 
-This project is licensed under the Apache 2.0 License - see the [LICENSE](https://{{ cookiecutter.git_server }}/{{ cookiecutter.git_org }}/{{ cookiecutter.image_name | lower }}/blob/master/LICENSE) file for details.
+This project is licensed under the Apache 2.0 License - see the [LICENSE](https://{{ cookiecutter.git_server }}/{{ cookiecutter.git_org }}/{{ cookiecutter.image_name | lower }}/blob/main/LICENSE) file for details.
