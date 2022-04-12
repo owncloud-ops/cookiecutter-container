@@ -1,0 +1,51 @@
+---
+kind: pipeline
+type: docker
+name: testing
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: lint
+  image: koalaman/shellcheck-alpine:stable
+  commands:
+  - find \{\{cookiecutter.image_name\}\}/overlay/usr/bin/ -type f | xargs shellcheck
+
+trigger:
+  ref:
+  - refs/heads/main
+  - refs/tags/**
+  - refs/pull/**
+
+---
+kind: pipeline
+name: notifications
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: notify
+  image: plugins/slack
+  settings:
+    channel:
+      from_secret: slack_channel
+    webhook:
+      from_secret: slack_webhook_private
+  when:
+    status:
+    - failure
+
+trigger:
+  ref:
+  - refs/heads/main
+  - refs/tags/**
+  status:
+  - success
+  - failure
+
+depends_on:
+- testing
