@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
+# shellcheck disable=SC3040
 set -eo pipefail
 
-printf "\nStarting {{ cookiecutter.image_name | capitalize }} ...\n"
+log_info "Start {{ cookiecutter.image_name | capitalize }}\n"
 exec # <start command>

@@ -7,12 +7,24 @@ LABEL org.opencontainers.image.url="https://github.com/owncloud-ops/{{ cookiecut
 LABEL org.opencontainers.image.source="https://github.com/owncloud-ops/{{ cookiecutter.image_name | lower }}"
 LABEL org.opencontainers.image.documentation="https://github.com/owncloud-ops/{{ cookiecutter.image_name | lower }}"
 
-ARG BUILD_VERSION=
+ARG BUILD_VERSION
+ARG CONTAINER_LIBRARY_VERSION
+
+# renovate: datasource=github-releases depName=owncloud-ops/container-library
+ENV CONTAINER_LIBRARY_VERSION="${CONTAINER_LIBRARY_VERSION:-v0.1.0}"
 
 ADD overlay/ /
 
-# put your RUN block here
+RUN addgroup -g 1001 -S app && \
+    adduser -S -D -H -u 1001 -h /opt/app -s /sbin/nologin -G app -g app app
 
+RUN apk --update add --virtual .build-deps curl tar && \
+    curl -SsL "https://github.com/owncloud-ops/container-library/releases/download/${CONTAINER_LIBRARY_VERSION}/container-library.tar.gz" | tar xz -C / && \
+    # Further steps to setup the app
+    chown -R app:app /opt/app && \
+    apk del .build-deps && \
+    rm -rf /var/cache/apk/* && \
+    rm -rf /tmp/*
 
 # VOLUME /opt/app
 

@@ -1,6 +1,6 @@
 ---
 repository:
-  name: { { cookiecutter.image_name | lower } }
+  name: {{ cookiecutter.image_name | lower }}
   description: Custom container image for {{ cookiecutter.image_name | capitalize }}
   homepage: https://hub.docker.com/r/{{ cookiecutter.dockerhub_namespace }}/{{ cookiecutter.image_name | lower }}
   topics: oci, container, {{ cookiecutter.image_name | lower }}
