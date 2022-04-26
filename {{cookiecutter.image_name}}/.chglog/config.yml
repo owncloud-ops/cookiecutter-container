@@ -1,4 +1,3 @@
-{% raw -%}
 style: github
 template: CHANGELOG.tpl.md
 info:
@@ -16,7 +15,9 @@ options:
       ci: CI Pipeline
       test: Testing
   header:
+    {% raw -%}
     pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
+    {%- endraw %}
     pattern_maps:
       - Type
       - Scope
@@ -24,4 +25,3 @@ options:
   notes:
     keywords:
       - BREAKING CHANGE
-{%- endraw %}
