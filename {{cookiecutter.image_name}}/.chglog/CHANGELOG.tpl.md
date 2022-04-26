@@ -1,3 +1,4 @@
+{% raw -%}
 # Changelog
 
 {{ range .Versions -}}
@@ -21,3 +22,4 @@
 {{ end -}}
 {{ end -}}
 {{ end -}}
+{%- endraw %}
