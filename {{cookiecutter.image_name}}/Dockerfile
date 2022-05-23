@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine:3.16
 
 LABEL maintainer="{{ cookiecutter.author }}"
 LABEL org.opencontainers.image.authors="{{ cookiecutter.author }}"
