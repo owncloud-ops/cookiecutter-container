@@ -19,7 +19,7 @@ RUN addgroup -g 1001 -S app && \
     adduser -S -D -H -u 1001 -h /opt/app -s /sbin/nologin -G app -g app app
 
 RUN apk --update add --virtual .build-deps curl tar && \
-    curl -SsL "https://github.com/owncloud-ops/container-library/releases/download/${CONTAINER_LIBRARY_VERSION}/container-library.tar.gz" | tar xz -C / && \
+    curl -SsfL "https://github.com/owncloud-ops/container-library/releases/download/${CONTAINER_LIBRARY_VERSION}/container-library.tar.gz" | tar xz -C / && \
     # Further steps to setup the app
     chown -R app:app /opt/app && \
     apk del .build-deps && \
