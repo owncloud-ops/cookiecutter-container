@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.17
+FROM docker.io/alpine:3.18
 
 LABEL maintainer="{{ cookiecutter.author }}"
 LABEL org.opencontainers.image.authors="{{ cookiecutter.author }}"
