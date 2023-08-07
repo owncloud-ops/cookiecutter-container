@@ -2,6 +2,7 @@
 
 [![Build Status](https://drone.owncloud.com/api/badges/{{ cookiecutter.git_org }}/{{ cookiecutter.image_name | lower }}/status.svg)](https://drone.owncloud.com/{{ cookiecutter.git_org }}/{{ cookiecutter.image_name | lower }}/)
 [![Docker Hub](https://img.shields.io/badge/docker-latest-blue.svg?logo=docker&logoColor=white)](https://hub.docker.com/r/{{ cookiecutter.dockerhub_namespace }}/{{ cookiecutter.image_name | lower }})
+[![Quay.io](https://img.shields.io/badge/quay-latest-blue.svg?logo=docker&logoColor=white)](https://quay.io/repository/{{ cookiecutter.dockerhub_namespace }}/{{ cookiecutter.image_name | lower }})
 
 Custom container image for {{ cookiecutter.image_name | capitalize }}.
 
