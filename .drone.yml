@@ -21,6 +21,7 @@ trigger:
 
 ---
 kind: pipeline
+type: docker
 name: notifications
 
 platform:
@@ -49,5 +50,3 @@ trigger:
 
 depends_on:
   - testing
-
-...
