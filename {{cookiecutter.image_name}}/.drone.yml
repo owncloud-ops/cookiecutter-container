@@ -10,7 +10,7 @@ platform:
 
 steps:
   - name: security-build
-    image: docker.io/owncloudci/drone-docker-buildx:2
+    image: docker.io/owncloudci/drone-docker-buildx:3
     settings:
       dockerfile: Dockerfile
       output: type=oci,dest=oci/${DRONE_REPO_NAME},tar=false
@@ -40,7 +40,7 @@ steps:
       - security-build
 
   - name: publish-dockerhub
-    image: docker.io/owncloudci/drone-docker-buildx:2
+    image: docker.io/owncloudci/drone-docker-buildx:3
     settings:
       dockerfile: Dockerfile
       password:
@@ -56,7 +56,7 @@ steps:
       - changelog
 
   - name: publish-quay
-    image: docker.io/owncloudci/drone-docker-buildx:2
+    image: docker.io/owncloudci/drone-docker-buildx:3
     settings:
       dockerfile: Dockerfile
       password:
